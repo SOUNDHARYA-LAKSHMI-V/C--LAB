@@ -1,0 +1,58 @@
+#include<stdio.h>
+void main()
+{
+int i,j,k,sp=0;
+clrscr();
+i=5;
+while(i>=1)
+{
+ j=1;
+ while(j<=i)
+ {
+  printf("*");
+  j++;
+ }
+ j=1;
+ while(j<=sp)
+ {
+  printf("  ");
+  j++;
+ }
+ k=1;
+ while(k<=i)
+ {
+  printf("*");
+  k++;
+ }
+printf("\n");
+sp=sp+1;
+i--;
+}
+sp=sp-1;
+i=1;
+while(i<=5)
+{
+ j=1;
+ while(j<=i)
+ {
+  printf("*");
+  j++;
+ }
+ j=1;
+ while(j<=sp)
+ {
+  printf("  ");
+  j++;
+ }
+ k=1;
+ while(k<=i)
+ {
+  printf("*");
+  k++;
+ }
+printf("\n");
+sp=sp-1;
+i++;
+}
+getch();
+}
