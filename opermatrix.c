@@ -57,14 +57,17 @@ int main()
 
         case 3:
             for (i = 0; i < row; i++) {
+             for(j=0;j<col;j++){
+    
                     result[i][j] = 0;
-                for (j = 0; j < col; j++) {
+                for (k= 0; k < col; k++) {
 
 
-                        result[i][j] += mat1[i][j] * mat2[i][j];
+                        result[i][j] += mat1[i][k] * mat2[k][j];
 
                 }
             }
+}
             printf("\nResult of multiplication:\n");
             for (i = 0; i < row; i++) {
                 for (j = 0; j < col; j++) {
