@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int rows, cols,i,j,matrix[10][10];
+    int rows, cols,i,j,matrix[10][10],low=0,up=0;
     printf("Enter the number of rows and columns (must be square matrix): ");
     scanf("%d %d", &rows, &cols);
     if(rows != cols) {
@@ -15,27 +15,18 @@ int main() {
             scanf("%d", &matrix[i][j]);
         }
     }
-    printf("\nUpper Triangular Matrix:\n");
+    
     for(int i = 0; i < rows; i++) {
         for(int j = 0; j < cols; j++) {
             if(j >= i)
-                printf("%d ", matrix[i][j]);
-            else
-                printf("0 ");
-        }
-        printf("\n");
-    }
-    printf("\nLower Triangular Matrix:\n");
-    for(int i = 0; i < rows; i++) {
-        for(int j = 0; j < cols; j++) {
+                up=matrix[i][j];
+           
             if(i >= j)
-                printf("%d ", matrix[i][j]);
-            else
-                printf("0 ");
-        }
-        printf("\n");
+                 low=matrix[i][j];
+        }
     }
-    }
+    printf("Sum of upper triangular matrix:%d/n",up);
+    printf("Sum of lower triangular matrix:%d/n",low);
 
     return 0;
 }
